@@ -2,18 +2,16 @@ html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background-image: url(imgs/bodyBg.png);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background: url(imgs/bodyBg.png) center center no-repeat  fixed;
-    background-size: cover;
     margin: 0;
 }
 
-header{
+header {
     background-color: rgb(239, 176, 59);
     display: flex;
     flex-direction: row;
@@ -23,16 +21,17 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    gap: 15%;
-    height: 100px;
+    gap: 5%;
+    height: 80px;
     z-index: 1000;
+    padding: 0 10px;
 }
 
-.download, .about, .footer{
-    font-family: 'Oswald';
+.download, .about, .footer {
+    font-family: 'Oswald', sans-serif;
     color: rgb(239, 176, 59);
-    font-size: 30px;
-    width: 200px;
+    font-size: 1.6rem;
+    min-width: 160px;
     text-decoration: none;
     text-align: center;
     align-items: center;
@@ -43,79 +42,65 @@ header{
     transition: 0.3s;
 }
 
-.download:hover, .about:hover, .footer:hover{
+.download:hover, .about:hover, .footer:hover {
     background-color: rgb(255, 255, 255);
     color: white;
-    font-size: 36px;
+    font-size: 1.8rem;
 }
 
-.dwnl{
+.dwnl, .abt {
     position: relative;
+    display: flex;
     text-align: center;
+    justify-self: center;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     margin-top: 10%;
     background-color: rgb(243, 210, 148);
-    width: 75%;
+    width: 80%;
     display: flex;
-    justify-self: center;
-    height: 300px;
+    flex-direction: column;
+    height: auto;
+    min-height: 200px;
+    padding: 2em;
     border-radius: 35px;
 }
 
-.abt{
-    font-family: 'Oswald';
-    position: relative;
-    margin-top: 10%;
-    flex-direction: column;
-    text-align: center;
-    background-color: rgb(243, 210, 148);
-    width: 75%;
-    display: flex;
-    justify-self: center;
-    height: 300px;
-    border-radius: 35px;
-}
-
-.h1{
+.h1 {
     color: rgb(239, 176, 59);
-    font-size: 30px;
+    font-size: 2.5rem;
     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
 
-.dwnl p{
+.dwnl p {
     color: rgb(239, 176, 59);
-    font-size: 30px;
+    font-size: 2rem;
     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
 }
 
-.btnDownload{
-    font-family: 'Oswald';
+.btnDownload {
+    font-family: 'Oswald', sans-serif;
     color: rgb(239, 176, 59);
-    font-size: 50px;
-    margin: 5%;
-    width: 200px;
-    height: 50%;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    padding: 15px;
+    min-width: 200px;
     text-decoration: none;
     text-align: center;
-    align-items: center;
-    justify-content: center;
     background-color: antiquewhite;
     border-radius: 35px;
     text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
     transition: 0.3s;
 }
 
-.btnDownload:hover{
+.btnDownload:hover {
     background-color: rgb(255, 255, 255);
     color: white;
-    font-size: 55px;
-    height: 55%;
+    font-size: 3rem;
 }
 
-.ftr{
-    font-family: 'Oswald';
+.ftr {
+    font-family: 'Oswald', sans-serif;
     position: relative;
     margin-top: 10%;
     flex-direction: column;
@@ -124,14 +109,71 @@ header{
     width: 100%;
     display: flex;
     justify-self: center;
-    height: 150px;
+    height: auto;
+    padding: 2em 0;
 }
 
 a {
     text-decoration: none;
 }
 
-.ds, .tg{
+.ds, .tg {
     color: antiquewhite;
-    font-size: 36px;
+    font-size: 2rem;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    header {
+        gap: 10%;
+        height: 70px;
+    }
+    
+    .download, .about, .footer {
+        font-size: 1.4rem;
+    }
+    
+    .h1 {
+        font-size: 2rem;
+    }
+    
+    .dwnl p, .btnDownload {
+        font-size: 1.6rem;
+    }
+    
+    .ftr {
+        padding: 1.5em;
+    }
+    
+    .ds, .tg {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        gap: 5%;
+        height: 60px;
+    }
+
+    .download, .about, .footer {
+        font-size: 1.2rem;
+        min-width: 120px;
+    }
+    
+    .h1 {
+        font-size: 1.6rem;
+    }
+    
+    .dwnl p, .btnDownload {
+        font-size: 1.4rem;
+    }
+    
+    .ftr {
+        padding: 1em;
+    }
+    
+    .ds, .tg {
+        font-size: 1.5rem;
+    }
 }
